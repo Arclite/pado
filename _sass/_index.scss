@@ -1,0 +1,34 @@
+@import 'main';
+
+.hero {
+	text-align: center;
+
+	@include span-columns(10);
+	@include shift(1);
+
+	@include media($mobile) {
+		@include span-columns(8);
+		@include shift(1);
+	}
+
+	h2 {
+		font-family: "Dosis", sans-serif;
+		font-size: 3.5em;
+	}
+
+	h3 {
+		font-family: "Dosis", sans-serif;
+		font-size: 2em;
+		margin-bottom: 0.5em;
+	}
+
+	p {
+		@include span-columns(8);
+		@include shift(2);
+
+		@include media($mobile) {
+			@include span-columns(6 of 6);
+			@include shift(0);
+		}
+	}
+}

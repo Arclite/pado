@@ -1,0 +1,23 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat-helpers';
+
+$mobile: new-breakpoint(max-width 480px, 10);
+$tablet: new-breakpoint(max-width 740px);
+
+$max-width: 720px;
+
+@import 'neat/neat';
+
+@import 'colors';
+@import 'header';
+@import 'type';
+
+body {
+	font-family: $body_family;
+	@include outer-container();
+
+	@media print {
+		margin: 0.1in 0.25in;
+	}
+}
+

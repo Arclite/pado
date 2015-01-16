@@ -1,0 +1,32 @@
+@import 'main';
+@import 'resume';
+@import 'syntax';
+
+.blogroll {
+	@include media($mobile) {
+		display: none;
+	}
+}
+
+.footnotes {
+	hr {
+		border: none;
+		width: 80%;
+		border-bottom: 1px dashed #dedede;
+	}
+}
+
+figure {
+	margin: 0;
+	margin-bottom: 1em;
+
+	img {
+		width: 100%;	
+	}
+
+	figcaption {
+		font-weight: 300;
+		font-size: 0.9em;
+	}
+	text-align: center;
+}

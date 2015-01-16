@@ -1,0 +1,42 @@
+$header_family: "Dosis", "Helvetica Neue", sans-serif;
+$body_family: "Ubuntu", "Helvetica Neue", "Segoe UI Light", sans-serif;
+
+h1,h2,h3 {
+	display: block;
+	margin: 0px;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 32px;
+	margin-bottom: 2px;
+
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+h2 {
+	font-size: 1.2em;
+	margin-bottom: 8px;
+	color: black;
+}
+
+p {
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 135%;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+a {
+	color: $highlight_color;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $highlight_dark;
+}
