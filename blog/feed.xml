@@ -1,0 +1,30 @@
+---
+layout: null
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geoff Pado</title>
+    <link>http://pado.name/blog/</link>
+    <atom:link href="http://pado.name/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Geoff Pado</description>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      {% if post.extern %}
+        <link>{{ post.extern }}</link>
+      {% else %}
+        <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      {% endif %}
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <author>geoff@pado.name (Geoff Pado)</author>
+      <guid>{{ site.baseurl}}{{ post.id }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+  </channel> 
+</rss>
