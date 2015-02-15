@@ -10,7 +10,7 @@ title: "Blog"
 	{% if post.extern %}
 		<a href="{{ post.extern }}">{{ post.title }}</a>
 	{% else %}
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+		<a href="{{ site.baseurl }}{{ post.url }}/">{{ post.title }}</a>
 	{% endif %}
 </h2>
 <div class="entry">
